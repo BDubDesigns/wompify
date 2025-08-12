@@ -161,24 +161,25 @@ function injectStyles() {
     }
 
     .womp-verb::before {
-      content: attr(data-originalword); /* Display the attribute value */
+      content: attr(data-originalword);
       position: absolute;
-      bottom: 100%; /* Position above the word */
+      bottom: 100%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, 1rem); /* Shift down by 1rem */
       background-color: black;
       color: white;
       padding: 5px;
       border-radius: 3px;
-      white-space: nowrap; /* Prevent text wrapping */
-      opacity: 0; /* Hidden by default */
-      transition: opacity 0.2s ease-in-out; /* Smooth transition */
-      pointer-events: none; /* Allow clicks on the underlying element */
-      z-index: 1000; /* Ensure it's above other content */
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out, transform 0.3s ease-out;
+      pointer-events: none;
+      z-index: 1000;
     }
 
     .womp-verb:hover::before {
-      opacity: 1; /* Show on hover */
+      opacity: 1;
+      transform: translate(-50%, 0); /* Reset to normal position */
     }
   `;
   document.head.appendChild(style);

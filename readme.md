@@ -45,7 +45,6 @@ Because verbs are serious. Wompify makes them less so. It’s a compact sandbox 
 ## Design choices
 
 - Uses the composure library to determine verbs and verb tense.
-- Morphology only — no heavy NLP or sentence parsing.
 - Replacements happen in the DOM via span injection; avoids breaking layout normally.
   - Note: Sometimes layouts depend on pseudo selectors, so changing text and inserting spans can still sometimes break layouts. I'm now only seeing this on github.com in my latest testing, but there may be more. Any tips or info is much appreciated!
 - Offline-only. No tracking. All logic runs locally.
