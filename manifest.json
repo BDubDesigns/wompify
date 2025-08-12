@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Wompify",
+  "version": "0.1.0",
+  "description": "Replace verbs with womp - tense-aware and case-preserving.",
+  "permissions": [],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
