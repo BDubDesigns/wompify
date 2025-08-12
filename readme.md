@@ -1,5 +1,6 @@
 # Wompify
 
+<img src="src/assets/logos/wompify_logo.png" alt="Wompify Logo" style="display: block; margin: 0 auto;" />
 Replace every verb with “womp” — but make it tense-aware and case-matched. Chrome extension. Minimal. Mischievous. Womptastic.
 
 - walked → womped
@@ -8,25 +9,27 @@ Replace every verb with “womp” — but make it tense-aware and case-matched.
 
 ## Why?
 
-Because verbs are serious. Wompify makes them less so. It’s a compact sandbox for DOM mutation, offline lexical mapping, and delightfully dumb linguistic mischief.
+Because the internet is serious business. Wompify makes it less so. It’s a compact sandbox for DOM mutation, offline lexical mapping, and delightfully dumb linguistic mischief.
+
+I first got the idea one day on the freeCodeCamp discord. The community manager started randomly "WOMP WOMP!"-ing in the general chat channel, and even changed the channel name to include "WOMP-WOMP". Many channel members "wompified" their display names as well. I'm always looking for a quick project to bang out that will teach me something new, and needed a break from my current project. Thus, Wompify was born.
 
 ## Features
 
-- 🧠 Tense-aware replacement:  
+- Tense-aware replacement:  
   Uses the composure library to determine which tense the verb is in, changing the verb to `womp`, `womped`, `womping`, `womps`, etc.
 
-- 🎩 Case preservation:  
+- Case preservation:  
   Keeps original case — ALL CAPS, Title Case, or lowercase.
 
-- 🖌️ Styled and swappable:  
+- Styled and swappable:  
   Verbs are wrapped in underlined `<span>` elements. Hover to reveal a tooltip with the original word.
 
   - Future versions will allow users to style the span element themselves with CSS from a settings modal.
 
-- 🛡️ Sensible guardrails:  
+- Sensible guardrails:  
   Local only, no fetch requests or logging.
 
-- 🧨 Manual activation (FUTURE):  
+- Manual activation (FUTURE):  
   Click the “WOMPIFY!” button that floats in the corner. Choice for no background script or auto-run.
 
 ## Install (Dev mode)
