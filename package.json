@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "vite build && npm run postbuild",
-    "postbuild": "npm run copy-manifest && npm run copy-css",
+    "postbuild": "npm run copy-static",
+    "copy-static": "npm run copy-manifest && npm run copy-css && npm run copy-icons && npm run copy-popup",
     "copy-manifest": "copyfiles -u 0 manifest.json dist/",
-    "copy-css": "copyfiles -u 2 src/styles/content.css dist/"
+    "copy-css": "copyfiles -u 2 src/styles/content.css dist/",
+    "copy-icons": "copyfiles -u 3 src/assets/icons/* dist/icons/",
+    "copy-popup": "copyfiles -u 1 src/popup.html dist/"
   },
   "repository": {
     "type": "git",
