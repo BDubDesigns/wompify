@@ -1,6 +1,9 @@
 # Wompify
 
-<img src="src/assets/logos/wompify_logo.png" alt="Wompify Logo" style="display: block; margin: 0 auto;" />
+<p align="center">
+  <img src="src/assets/logos/wompify_logo.png" alt="Wompify Logo" />
+</p>
+
 Replace every verb with “womp” — but make it tense-aware and case-matched. Chrome extension. Minimal. Mischievous. Womptastic.
 
 - walked → womped
@@ -16,7 +19,7 @@ I first got the idea one day on the freeCodeCamp discord. The community manager 
 ## Features
 
 - Tense-aware replacement:  
-  Uses the composure library to determine which tense the verb is in, changing the verb to `womp`, `womped`, `womping`, `womps`, etc.
+  Uses the compromise library to determine which tense the verb is in, changing the verb to `womp`, `womped`, `womping`, `womps`, etc.
 
 - Case preservation:  
   Keeps original case — ALL CAPS, Title Case, or lowercase.
@@ -29,8 +32,9 @@ I first got the idea one day on the freeCodeCamp discord. The community manager 
 - Sensible guardrails:  
   Local only, no fetch requests or logging.
 
-- Manual activation (FUTURE):  
-  Click the “WOMPIFY!” button that floats in the corner. Choice for no background script or auto-run.
+- Manual activation (FUTURE):
+  - Currently the script automatically runs on each page when activated.
+  - In the future, users will have the option to auto-run, or click the “WOMPIFY!” button that floats in the corner to Wompify on demand. Choice for no background script or auto-run.
 
 ## Install (Dev mode)
 
@@ -47,7 +51,7 @@ I first got the idea one day on the freeCodeCamp discord. The community manager 
 
 ## Design choices
 
-- Uses the composure library to determine verbs and verb tense.
+- Uses the compromise library to determine verbs and verb tense.
 - Replacements happen in the DOM via span injection; avoids breaking layout normally.
   - Note: Sometimes layouts depend on pseudo selectors, so changing text and inserting spans can still sometimes break layouts. I'm now only seeing this on github.com in my latest testing, but there may be more. Any tips or info is much appreciated!
 - Offline-only. No tracking. All logic runs locally.
